@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onclick="alert('This is an alert!'); return false;" id="alert">Click me for an alert</a>
+    <a href="#" onclick="return confirmAction();" id="confirm">Click me for a confirm dialog</a>
+    <a href="#" onclick="promptAction(); return false;" id="prompt">Click me for a prompt dialog</a>
+
+    <script type="text/javascript">
+        function confirmAction() {
+            return confirm('Are you sure you want to proceed?');
+        }
+    </script>
+
+
+
+<script type="text/javascript">
+    function promptAction() {
+        var userInput = prompt('Please enter your name:');
+        document.write(userInput)
+        if (userInput !== null) {
+            alert('Hello, ' + userInput + '!');
+        }
+    }
+</script>
+
+</body>
+</html>
